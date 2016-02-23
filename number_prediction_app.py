@@ -1,6 +1,7 @@
 import flask
 import tensorflow as tf
 import numpy as np
+import os
 
 #---------- MODEL IN MEMORY ----------------#
 
