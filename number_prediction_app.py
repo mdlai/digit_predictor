@@ -93,20 +93,12 @@ app = flask.Flask(__name__)
 # Homepage
 @app.route("/")
 def viz_page():
-    """
-    Homepage: serve our visualization page, awesome.html
-    """
     with open("predict.html", 'r') as viz_file:
         return viz_file.read()
 
 # Get an example and return it's score from the predictor model
 @app.route("/score", methods=["POST"])
 def score():
-    """
-    When A POST request with json data is made to this uri,
-    Read the example from the json, predict probability and
-    send it with a response
-    """
     # Get decision score for our example that came with the request
     data = flask.request.json
 
