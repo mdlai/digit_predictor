@@ -96,10 +96,8 @@ def viz_page():
     with open("predict.html", 'r') as viz_file:
         return viz_file.read()
 
-# Get an example and return it's score from the predictor model
 @app.route("/score", methods=["POST"])
 def score():
-    # Get decision score for our example that came with the request
     data = flask.request.json
 
 #Alternate Method?
